@@ -71,13 +71,13 @@ javac -d out src/Project/Menu.java src/Project/OrderItem.java src/Project/Order.
 java -cp out Project.MainProgram
 ```
 
-**2. Run the Unit Tests (JUnit 5)**
+**2. Run the Unit Tests (JUnit)**
 
-Download the [JUnit Platform Console Standalone](https://mvnrepository.com/artifact/org.junit.platform/junit-platform-console-standalone) jar and place it in the project root folder, then compile and run (replace `1.x.x` with the version you downloaded):
+Download the [JUnit Platform Console Standalone](https://mvnrepository.com/artifact/org.junit.platform/junit-platform-console-standalone) jar and place it in the project root folder, then compile and run (replace `x.x.x` with the version you downloaded, e.g. `6.1.3`):
 
 ```bash
-javac -d out -cp junit-platform-console-standalone-1.x.x.jar src/Project/*.java
-java -jar junit-platform-console-standalone-1.x.x.jar --class-path out --select-class Project.TestCase
+javac -d out -cp junit-platform-console-standalone-x.x.x.jar src/Project/*.java
+java -jar junit-platform-console-standalone-x.x.x.jar execute --class-path out --select-class Project.TestCase
 ```
 
 ---
@@ -87,3 +87,6 @@ java -jar junit-platform-console-standalone-1.x.x.jar --class-path out --select-
 Detailed test case scenarios, boundary tests, edge cases, and execution Pass/Fail results can be found in the documentation folder:
 
 - **Test Execution Matrix**: [docs/testcase_restaurant.xlsx](docs)
+
+> Note: Some test cases in the matrix are grouped into a single JUnit test method, so the matrix lists 24 test cases while the JUnit run reports 21 tests.
+
