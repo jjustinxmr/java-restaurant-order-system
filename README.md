@@ -86,4 +86,4 @@ java -jar junit-platform-console-standalone-1.x.x.jar --class-path out --select-
 
 Detailed test case scenarios, boundary tests, edge cases, and execution Pass/Fail results can be found in the documentation folder:
 
-- **Test Execution Matrix**: [docs/testcase_restaurant.xlsx](docs/testcase_restaurant.xlsx)
+- **Test Execution Matrix**: [docs/testcase_restaurant.xlsx](docs)
